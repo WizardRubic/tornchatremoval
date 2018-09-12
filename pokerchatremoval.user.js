@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Poker Chat Removal
 // @namespace    http://tampermonkey.net/
-// @version      0.1
+// @version      0.2
 // @description  try to take over the world! i mean remove the poker beta chat
 // @author       WizardRubic
 // @match        *.torn.com/*
@@ -16,6 +16,7 @@
     for(var index = collectionOfChats.length-1; index>=0; index--) {
         if(collectionOfChats[index].title == "Poker Beta") {
             collectionOfChats[index].parentElement.style.display = "none";
+            collectionOfChats[index].parentElement.remove();
         }
     }
 })();
